@@ -1,5 +1,5 @@
 ---
-title: 복소수의 연산 성질, 리스트, 다차원 공간 정의
+title: 복소수의 연산
 date: 2026-05-17 14:10:00 +0900
 categories: [Math, Linear Algebra]
 tags: [linear-algebra, complex-numbers, ai, gnn]
