@@ -1,6 +1,6 @@
 ---
 title: 하네스의 개념
-date: 2026-05-17 22:10:00 +0900
+date: 2026-05-17 21:50:00 +0900
 categories: [AI, Engineering]
 tags: [ai, test-harness, evaluation, guardrails, observability]
 ---
