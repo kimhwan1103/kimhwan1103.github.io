@@ -70,28 +70,49 @@ tags: [linear-algebra, complex-numbers, ai, gnn]
 - 절댓값
 	- 복소수의 절댓값은 복소 평면의 원점에서 해당 복소수점까지의 유클리드 거리를 의미함
 		- 신호 처리에서는 진폭이나 에너지로 해석됨
-	- 대수적 정의 $|z| = \sqrt{a^2 + b^2}$
-	- 켤레와의 관계 $|z|^2 = z \cdot \bar{z}$
+	- 대수적 정의
+
+$$
+\lvert z \rvert = \sqrt{a^2 + b^2}
+$$
+
+	- 켤레와의 관계
+
+$$
+\lvert z \rvert^2 = z \cdot \bar{z}
+$$
+
 		- 이 수식은 매우 중요 복소수 자기 자신과 켤레를 곱하면 **허수부가 사라지고 크기의 제곱(실수)**가 나옴 -> 즉 모든 복소수 연산의 기초가 됨
 	- 주요 성질
-		- $|z \cdot w| = |z| \cdot |w|$ (곱셈의 크기는 각 크기의 곱)
-		- $|\bar{z}| = |z|$ (대칭 이동해도 원점에서의 거리는 동일)
-		- $|z + w| \leq |z| + |w|$ (삼각형 부등식)
+		- $\lvert z \cdot w \rvert = \lvert z \rvert \cdot \lvert w \rvert$ (곱셈의 크기는 각 크기의 곱)
+		- $\lvert \bar{z} \rvert = \lvert z \rvert$ (대칭 이동해도 원점에서의 거리는 동일)
+		- $\lvert z + w \rvert \leq \lvert z \rvert + \lvert w \rvert$ (삼각형 부등식)
 
 ![절댓값](/assets/img/posts/linear-algebra/04_modulus.svg)
 
 - 켤레와 절댓값이 결합할때 비로소 복소수를 **복소수를 측정 가능한 양**으로 변환 가능
 
 ### 3.4 나눗셈
-- 분모에 복소수가 있으면 연산이 불가능에 가깝지만, 분모의 켤레복소수를 분자/분모에 곱하면 분모가 절댓값의 제곱(실수)로 변하여 계산이 단순해짐 $$\frac{w}{z} = \frac{w \cdot \bar{z}}{z \cdot \bar{z}} = \frac{w \cdot \bar{z}}{|z|^2}$$
+- 분모에 복소수가 있으면 연산이 불가능에 가깝지만, 분모의 켤레복소수를 분자/분모에 곱하면 분모가 절댓값의 제곱(실수)로 변하여 계산이 단순해짐
+
+$$
+\frac{w}{z}
+= \frac{w \cdot \bar{z}}{z \cdot \bar{z}}
+= \frac{w \cdot \bar{z}}{\lvert z \rvert^2}
+$$
 
 ### 3.5 복소 벡터공간과 에르미트 내적
 - 컴공에서 다루는 벡터 공간에서 두 복소수 벡터의 유사도를 구할때는 반드시 한쪽 벡터에 켤레를 취해야함
 - $\langle \mathbf{u}, \mathbf{v} \rangle = \mathbf{u}^H \mathbf{v}$ (여기서 $H$는 켤레 전치/Hermitian)
-- 이렇게 해야만 자기 자신과의 내적이 $|z|^2$ 형태의 양의 실수(거리)로 정의됨
+- 이렇게 해야만 자기 자신과의 내적이 $\lvert z \rvert^2$ 형태의 양의 실수(거리)로 정의됨
 
 ## 4. 극좌표 형식 
-- 복소평면 위의 점을 (a,b)라는 직교 좌표가 아니라 오일러 공식을 이용하여 표현하면 계산이 비약적으로 간단해짐 $$z = r(\cos \theta + i \sin \theta) = re^{i\theta}$$
+- 복소평면 위의 점을 (a,b)라는 직교 좌표가 아니라 오일러 공식을 이용하여 표현하면 계산이 비약적으로 간단해짐
+
+$$
+z = r(\cos \theta + i \sin \theta) = re^{i\theta}
+$$
+
 	-  r : 원점에서의 거리 (Magnitude/Amplitude)
 	-  $\theta$ : 실수축과 이루는 각도 (Phase)
 - 이런 형식을 사용하면 단순한 지수 연산으로 변경됨
